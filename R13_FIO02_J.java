@@ -1,3 +1,5 @@
-// R13 FIO02-J. Detect and handle file-related errors Given the non-compliant code below:
-File file = new File(args[0]);
-file.delete();
+// R13 FIO02-J. Detect and handle file-related errors
+File file = new File("file");
+if (!file.delete()) {
+  // Deletion failed, handle error
+}
